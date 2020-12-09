@@ -83,7 +83,8 @@ $(document).ready(function function_name(argument) {
 	}
 	var i = $(".company__link-mobile").text();
 	$(".company__link-mobile").click(function(e){
-		$(".company__item").slideToggle(100);
+		// $(".company__item").slideToggle(100);
+		$(".company__row").toggleClass('active');
 		$(this).toggleClass("active");
 		if($(this).hasClass("active")){
 			$(this).text("Вернуться назад");
@@ -92,6 +93,7 @@ $(document).ready(function function_name(argument) {
 			$(this).text(i);
 		}
 		return false;
+
 	});
 
 	$('.goto').click(function () {
